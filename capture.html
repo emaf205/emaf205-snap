@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EMAF205 SNAP</title>
+  <style>
+    :root { color-scheme: light; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      background: transparent;
+      font: 600 13px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body.status {
+      box-sizing: border-box;
+      width: 176px;
+      height: 52px;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+
+    #message {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 0 14px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    body.status #message { display: flex; }
+
+    body.success {
+      background: #178a45;
+      color: #fff;
+    }
+
+    body.error {
+      width: 300px;
+      min-height: 76px;
+      height: auto;
+      overflow: visible;
+      background: #b42318;
+      color: #fff;
+    }
+
+    body.error #message {
+      min-height: 76px;
+      height: auto;
+      padding: 12px 14px;
+      white-space: normal;
+      font-weight: 600;
+    }
+
+    .mark {
+      font-size: 17px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body tabindex="-1">
+  <div id="message" role="status" aria-live="polite"></div>
+  <script src="capture.js"></script>
+</body>
+</html>
